@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eren Demir - CRM Architect/Developer</title>
+<title>Eren Demir - CRM Arkitekt/Utvecklare</title>
 <meta name="description" content="Eren Demir - CRM Architect/Developer based in Malmö, Sweden. 10+ years of CRM, .NET, Azure and Power Platform experience.">
 <meta property="og:title" content="Eren Demir - CRM Architect/Developer">
 <meta property="og:description" content="CRM Architect/Developer based in Malmö, Sweden. 10+ years of CRM, .NET, Azure and Power Platform experience.">
@@ -120,15 +120,15 @@
     transition: fill 0.2s;
   }
 
-  [data-lang="sv"] { display: none !important; }
-  body.sv [data-lang="sv"].pdf-btn { display: flex !important; }
-  body.sv [data-lang="sv"].section-title { display: flex !important; }
-  body.sv [data-lang="sv"].timeline-desc { display: block !important; }
-  body.sv [data-lang="sv"].name { display: block !important; }
-  body.sv [data-lang="sv"].level { display: block !important; }
-  body.sv [data-lang="sv"].subtitle { display: block !important; }
-  body.sv [data-lang="sv"].timeline-role { display: block !important; }
-  body.sv [data-lang="en"] { display: none !important; }
+  [data-lang="en"] { display: none !important; }
+  body.en [data-lang="en"].pdf-btn { display: flex !important; }
+  body.en [data-lang="en"].section-title { display: flex !important; }
+  body.en [data-lang="en"].timeline-desc { display: block !important; }
+  body.en [data-lang="en"].name { display: block !important; }
+  body.en [data-lang="en"].level { display: block !important; }
+  body.en [data-lang="en"].subtitle { display: block !important; }
+  body.en [data-lang="en"].timeline-role { display: block !important; }
+  body.en [data-lang="sv"] { display: none !important; }
 
   /* ---- Hero ---- */
   .hero {
@@ -598,8 +598,8 @@
     Spara Sundet PDF
   </button>
   <div class="lang-toggle">
-    <button class="active" onclick="setLang('en')">EN</button>
-    <button onclick="setLang('sv')">SV</button>
+    <button onclick="setLang('en')">EN</button>
+    <button class="active" onclick="setLang('sv')">SV</button>
   </div>
 </div>
 
@@ -910,7 +910,7 @@
 
 <script>
 function setLang(lang) {
-  document.body.classList.toggle('sv', lang === 'sv');
+  document.body.classList.toggle('en', lang === 'en');
   document.documentElement.lang = lang;
   document.title = lang === 'sv' ? 'Eren Demir - CRM Arkitekt/Utvecklare' : 'Eren Demir - CRM Architect/Developer';
   document.querySelectorAll('.lang-toggle button').forEach(btn => {
@@ -920,7 +920,7 @@ function setLang(lang) {
 }
 
 function getLang() {
-  return document.body.classList.contains('sv') ? 'sv' : 'en';
+  return document.body.classList.contains('en') ? 'en' : 'sv';
 }
 
 function getOriginalTitle() {
